@@ -2,36 +2,45 @@
 	Chapter 1
 	Chapter Case Project
 
-	Yurts
+	Project2_Brice
 	Author: Aubrey Brice
-	Date: 3/28/26
+	Date: 4/5/26
 
 	Filename: pacific.css*/
  * { box-sizing: border-box; }
  body { background-color: #90C7E3;
        color: #666666;
-	   font-family: Verdana, Arial, sans-serif;
+	   font-family: ivyora-display;
 	   margin: 0;
 }
 #wrapper { background-color: #FFFFFF;
 }
 header { background-color: #002171;
          color: #FFFFFF;
-		 font-family: Georgia, serif;
+		 font-family: ivyora-display;
 		 padding: 1em;
 }
 header a { text-decoration: none; }
-header a:link       { color: #FFFFFF; }
-header a:visited { color: #FFFFFF; }
+header a:link       { color: #F8F7EF; }
+header a:visited { color: #F8F7EF; }
 header a:hover     { color: #90C7E3; }
 h1 {  font-size: 1.5em;
      text-align: center;
 }
-h2 { color: #1976D2;
-     font-family: Georgia, serif; 
+.logo {
+  width: 220px;
+  height: auto;
 }
-h3 { font-family: Georgia, serif; }
-nav { background-color: #FFF;
+
+.logo .st0 {
+  fill: #F8F7EF; /* default color (white in header) */
+  transition: fill 0.3s ease;
+}
+h2 { color: #1976D2;
+     font-family: ivyora-display; 
+}
+h3 { font-family: ivyora-display; }
+nav { background-color: #F8F7EF;
      font-size: 1.2em;
 	 text-align: center;
 }
@@ -55,7 +64,7 @@ main { display: block;
 dt { color: #002171;
      font-weight: bold;
 }
-.resort { color: #1976D2;
+.guesthouse { color: #1976D2;
           font-size: 1.2em;
 }
 #homehero { height: 300px;
@@ -63,7 +72,7 @@ dt { color: #002171;
   			background-repeat: no-repeat;
             background-size: 200% 100%; 
  }
-#yurthero { height: 300px;
+#roomhero { height: 300px;
             background-image: url(../images/yurt.jpg);
   			background-repeat: no-repeat;
             background-size: 200% 100%; 
@@ -82,7 +91,7 @@ dt { color: #002171;
 section {  padding-left: .5em;
 		padding-right: .5em;
 }			
-footer { background-color: #FFF;
+footer { background-color: #F8F7EF;
        font-size: .70em;
        font-style: italic;
 	   padding: 1em;
@@ -119,7 +128,7 @@ video { float: right; margin: 2em; }
 		        flex-direction: row; }
 		#mobile { display: none; }
 		#desktop { display: inline; }
-		#homehero, #yurthero, #trailhero, #reshero { background-size: 100% 100%; }
+		#homehero, #roomhero, #trailhero, #reshero { background-size: 100% 100%; }
 		form { width: 60%;
 		      display: grid;
 			  grid-gap: 1em; gap: 1em;
@@ -135,5 +144,141 @@ video { float: right; margin: 2em; }
 		          width: 80%; }	
 }				  
 
+/* CARD */
+.card {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: #fff;
+}
 
+/* CARD */
+.card {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
+/* GRID LAYOUT */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+  gap: 0;
+}
+
+/* GENERAL FIELDSET RESET */
+fieldset {
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* LEFT PANEL (STAY DETAILS) */
+.stay {
+  grid-row: 1 / span 2; /* spans both right boxes */
+  grid-column: 1;
+
+  background-color: #002171;
+  color: white;
+  border: none;
+}
+
+.stay legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: white;
+}
+
+/* RIGHT TOP (EXCURSIONS) */
+.excursions {
+  grid-column: 2;
+  grid-row: 1;
+
+  border: 2px solid #90C7E3;
+}
+
+/* RIGHT BOTTOM (SOUVENIRS) */
+.souvenirs {
+  grid-column: 2;
+  grid-row: 2;
+
+  border: 2px solid #90C7E3;
+  border-top: none; /* connects visually like mockup */
+}
+
+/* TIGHTER SPACING */
+.excursions label,
+.souvenirs label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* INPUTS */
+input[type="number"] {
+  width: 65px;
+  padding: 4px;
+}
+
+/* TOTAL BAR */
+.total-box {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+
+  background-color: #90C7E3;
+  padding: 20px;
+}
+
+.total-box p {
+  margin: 0;
+  font-weight: bold;
+  color: #002171;
+  font-size: 1.2em;
+}
+
+#estimate {
+  font-weight: normal;
+  color: #002171;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .stay {
+    grid-row: auto;
+    grid-column: 1;
+  }
+
+  .excursions {
+    grid-column: 1;
+  }
+
+  .souvenirs {
+    grid-column: 1;
+    border-top: 2px solid #90C7E3;
+  }
+
+  .total-box {
+    grid-column: 1;
+  }
+
+  .excursions label,
+  .souvenirs label {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  input[type="number"] {
+    margin-top: 5px;
+  }
+}
