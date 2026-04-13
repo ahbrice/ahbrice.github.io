@@ -1,10 +1,10 @@
 <!-- JavaScript 7th Edition
-	Chapter 1
+	Chapter 3
 	Chapter Case Project
 
-	Project2_Brice
+	Project3_Brice
 	Author: Aubrey Brice
-	Date: 4/5/26
+	Date: 4/12/26
 
 	Filename: reservations.html-->
 <!DOCTYPE html>
@@ -13,8 +13,8 @@
 <title>Holt Guesthouse :: Reservations</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/pacific.css" rel="stylesheet">
-<script src="scripts/project1_brice.js" defer></script>
+<link rel="stylesheet" href="css/global.css">
+<script src="scripts/reservations.js" defer></script>
 </head>
 <body>
   <header>
@@ -45,8 +45,8 @@
       <li><a href="rooms.html">Rooms</a></li>
       <li><a href="activities.html">Activities</a></li>
       <li><a href="reservations.html">Reservations</a></li>
-      <li><a href="contactus.html">Contact Us</a></li>
-	</ul>
+      <li><a href="contactus.html">Contact Us</a></li>	
+    </ul>
   </nav>
   <div id="wrapper">
   <div id="reshero">
@@ -59,13 +59,16 @@
     <!-- Stay Details -->
       <fieldset class="stay">
        <legend>Stay Details</legend>
+       <br><br>
         <label>
-        Number of Rooms ($243 per room/night)
+        Number of Rooms
+        <br>$243 per room/night
         <input type="number" id="rooms" min="1" max="3" value="1">
        </label>
-        <br>
+        <p><br><br></p>
         <label>
-        Number of Nights (2–5 nights)
+        Number of Nights
+        <br>2–5 nights
         <input type="number" id="nights" min="2" max="5" value="2">
        </label>
       </fieldset>
@@ -73,6 +76,7 @@
     <!-- Optional Add-on Excursions -->
     <fieldset class="excursions">
       <legend>Excursions</legend>
+      <br>
       <label>
         Black Beach Horseback Riding ($120 per rider)
         <input type="number" id="horseTour" min="0" max="6" value="0">
@@ -87,6 +91,7 @@
     <!-- Souvenirs -->
     <fieldset class="souvenirs">
       <legend>Souvenirs</legend>
+      <br>
       <label>
         Lopapeysa Sweater ($400 each)
         <input type="number" id="sweater" min="0" max="6" value="0">
@@ -102,18 +107,19 @@
         <input type="number" id="jam" min="0" max="3" value="0">
       </label>
     </fieldset>
+    <!-- Taxes and Total -->
     <div class="total-box">
-       <p>Total Estimate: <span id="estimate">$0</span></p>
-       </div>
-       </div>
+       <p class="tax-line">Tax: <span id="tax">$0</span></p>
+        <p class="total-line">Total Estimate: <span id="estimate">$0</span></p>
+    </div>
+   </div>
   </form>
 </div>
-
   </main>
-  <footer>
+</div>
+<footer>
 Copyright &copy; 2026 Holt Guesthouse<br>
 <a href="mailto:a0449263@amarillocollege.com">a0449263@amarillocollege.com</a>
   </footer>
-</div>
 </body>
 </html>
