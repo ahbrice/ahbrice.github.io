@@ -1,12 +1,12 @@
 /*  JavaScript 7th Edition
-    Chapter 1
+    Chapter 3
     Chapter Case Project
 
     Holt Guesthouse
     Author: Aubrey Brice
-    Date:   4/5/26
+    Date:   4/12/26
 
-    Filename: project2_brice.js
+    Filename: reservations.js
 */
 
 
@@ -37,7 +37,9 @@ function setupForm() {
 
   // Attach event listeners to ALL inputs
   let inputs = document.querySelectorAll("#estimateform input");
-  inputs.forEach(input => input.onchange = getEstimate);
+  inputs.forEach(input => {
+    input.addEventListener("input" , getEstimate);
+  });
 
   getEstimate();
 }
@@ -58,13 +60,19 @@ function getEstimate() {
   let excursionCost = (horse * HORSE_TOUR) + (farm * FARM_TOUR);
   let souvenirCost = (sweater * SWEATER) + (cheese * CHEESE) + (jam * JAM);
 
-  // Taxes
-  let taxStandard = (roomCost + (cheese * CHEESE) + (jam * JAM)) * TAX_STANDARD;
+  // Taxes (kept separate)
+  let taxStandard = (roomCost + excursionCost + (cheese * CHEESE) + (jam * JAM)) * TAX_STANDARD;
   let taxClothing = (sweater * SWEATER) * TAX_CLOTHING;
 
-  let total = roomCost + excursionCost + souvenirCost + taxStandard + taxClothing;
+  let totalTax = taxStandard + taxClothing;
 
-  // Display nicely formatted
+  // Final total (includes tax)
+  let total = roomCost + excursionCost + souvenirCost + totalTax;
+
+  // DISPLAY
+  document.getElementById("tax").innerHTML =
+    "$" + totalTax.toFixed(2);
+
   document.getElementById("estimate").innerHTML =
     "$" + total.toFixed(2);
 }
