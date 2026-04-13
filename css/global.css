@@ -2,18 +2,27 @@
 	Chapter 1
 	Chapter Case Project
 
-	Project2_Brice
+	Project3_Brice
 	Author: Aubrey Brice
-	Date: 4/5/26
+	Date: 4/12/26
 
-	Filename: pacific.css*/
+	Filename: global.css*/
  * { box-sizing: border-box; }
- body { background-color: #90C7E3;
-       color: #666666;
-	   font-family: ivyora-display;
-	   margin: 0;
+ html, body {
+      height: 100%;
+ }
+ body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #90C7E3;
+    color: #666666;
+	  font-family: ivyora-display;
+	  margin: 0;
 }
-#wrapper { background-color: #FFFFFF;
+#wrapper { 
+  flex: 1;
+  background-color: #FFFFFF;
 }
 header { background-color: #002171;
          color: #FFFFFF;
@@ -68,22 +77,27 @@ dt { color: #002171;
           font-size: 1.2em;
 }
 #homehero { height: 300px;
-            background-image: url(../images/coast.jpg);
+            background-image: url(../images/farm.png);
   			background-repeat: no-repeat;
             background-size: 200% 100%; 
  }
 #roomhero { height: 300px;
-            background-image: url(../images/yurt.jpg);
+            background-image: url(../images/mossfield.png);
   			background-repeat: no-repeat;
             background-size: 200% 100%; 
  }
 #trailhero { height: 300px;
-            background-image: url(../images/trail.jpg);
+            background-image: url(../images/blackbeach.png);
   			background-repeat: no-repeat;
             background-size: 200% 100%; 
 }
 #reshero { height: 300px;
-            background-image: url(../images/ocean.jpg);
+            background-image: url(../images/redhouse.png);
+  			background-repeat: no-repeat;
+            background-size: 200% 100%;
+}
+#tacthero { height: 300px;
+            background-image: url(../images/lavaropes.png);
   			background-repeat: no-repeat;
             background-size: 200% 100%; }
 #mobile  { display: inline; }	
@@ -108,10 +122,9 @@ td, th { padding: 5px;
 td { text-align: center; }
 .text { text-align: left; }
 tr:nth-of-type(even) { background-color: #F5FAFC; }
-form { display: flex;
-      flex-direction: column;
-	  padding-left: 1em;
-	  width: 80%; }
+form { display: block;
+	  padding-left: 0;
+	  width: 100%; }
 input, textarea { margin-bottom: .5em; }
 video { float: right; margin: 2em; }
 @media (min-width: 600px) { 
@@ -129,10 +142,9 @@ video { float: right; margin: 2em; }
 		#mobile { display: none; }
 		#desktop { display: inline; }
 		#homehero, #roomhero, #trailhero, #reshero { background-size: 100% 100%; }
-		form { width: 60%;
-		      display: grid;
-			  grid-gap: 1em; gap: 1em;
-			  grid-template-columns: 10em 1fr; }
+		form { width: 100%;
+		      display: block;
+			   }
 		input[type="submit"] { grid-column: 2 / 3; width: 9em; }
 }
 @media (min-width: 1024px) { 
@@ -144,25 +156,17 @@ video { float: right; margin: 2em; }
 		          width: 80%; }	
 }				  
 
-/* CARD */
-.card {
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  background: #fff;
-}
 
 /* CARD */
 .card {
   max-width: 900px;
-  margin: 40px auto;
+  margin: 40px 0;
   padding: 20px;
   background: #f5f5f5;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
+
 
 /* GRID LAYOUT */
 .layout {
@@ -189,9 +193,24 @@ fieldset {
   border: none;
 }
 
-.stay legend {
+/* FIX LEGEND POSITIONING */
+fieldset {
+  position: relative;
+  padding-top: 30px; /* pushes content down below legend */
+}
+
+/* STYLE ALL LEGENDS */
+legend {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.1em;
+}
+
+/* KEEP STAY HEADER WHITE */
+.stay legend {
   color: white;
 }
 
@@ -242,13 +261,16 @@ input[type="number"] {
   color: #002171;
   font-size: 1.2em;
 }
+#tax {
+  font-weight: normal;
+}
 
 #estimate {
   font-weight: normal;
   color: #002171;
 }
 
-/* 📱 MOBILE RESPONSIVE */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
   .layout {
     grid-template-columns: 1fr;
@@ -270,7 +292,18 @@ input[type="number"] {
 
   .total-box {
     grid-column: 1;
+    
   }
+  .tax-line {
+  font-size: 0.9em;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.total-line {
+  font-size: 1.2em;
+  font-weight: bold;
+}
 
   .excursions label,
   .souvenirs label {
