@@ -1,19 +1,21 @@
 <!-- JavaScript 7th Edition
-	Chapter 1
+	Chapter 3
 	Chapter Case Project
 
-	Project2_Brice
+	Project3_Brice
 	Author: Aubrey Brice
-	Date: 4/5/26
+	Date: 4/12/26
 
 	Filename: activities.html-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Pacific Trails Resort :: Activities</title>
+<title>Holt Guesthouse :: Activities</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/pacific.css" rel="stylesheet">
+<link href="css/global.css" rel="stylesheet">
+<link href="css/calendar.css" rel="stylesheet">
+<script src="scripts/calendar.js" defer></script> 
 </head>
 <body>
   <header>
@@ -52,27 +54,55 @@
   </div>
   <main>
     <h2>Activities at Holt Guesthouse</h2>
-	<div id="flow">
-	  <section>
-        <h3>Hiking</h3>
-        <p><span class="guesthouse">Holt Guesthouse</span> has 5 miles of hiking trails and is adjacent to a state park. Go it
-alone or join one of our guided hikes.</p>
-      </section>
-	  <section>
-        <h3>Kayaking</h3>
-        <p>Ocean kayaks are available for guest use.</p>
-	  </section>
-	  <section>
-        <h3>Bird Watching</h3>
-        <p>While anytime is a good time for bird watching at Pacific Trails, we offer guided birdwatching
-trips at sunrise several times a week.</p>
-      </section>
-	 </div>
+	<div class="activity-layout">
+
+  <!-- LEFT SIDE -->
+  <div class="activities">
+
+    <section>
+      <h3>Horseback Riding</h3>
+      <p>We offer scenic riding tours on the beautiful black sand beach near our guesthouse. 
+          The tour is approximately 1-hour long and open to riders of all abilities. We are happy to provide you width 
+        an opportunity to meet our lovely Icelandic horses!</p>
+      <p><em>We are committed to the welfare of our horses, so please be aware we do have a weight limit for our rides as well as specific clothing requirements. 
+  We reserve the right to ask riders to step on a scale and wear the provided attire.</em></p>
+    </section>
+
+    <section>
+      <h3>Sheep Farm Experience</h3>
+      <p>Ever wonder what it's like to work on an Icelandic sheep farm? Well now you can, with our Icelandic Sheep Farm Experience! 
+          Join Orri and our two hard working dogs to see the ins and outs of caring for our 200 sheep. This experiences is 
+        approximately 3-hours long and includes the amazing history of sheep farming in Iceland, hands-on interaction with our lovely sheep, and a peek into the day-to-day life of Icelanders.</p>
+    </section>
+
+  </div>
+
+  <!-- RIGHT SIDE -->
+  <aside class="calendar-card">
+    <h3>Activity Schedule</h3>
+
+    <div class="legend">
+      <span class="unavailable">Unavailable</span>
+      <span class="booked">Booked</span>
+      <span class="available">Available</span>
+    </div>
+
+    <h4 id="monthTitle"></h4>
+    <table id="calendar">
+      <thead>
+        <tr id="weekdays"></tr>
+      </thead>
+      <tbody id="calendar-body"></tbody>
+    </table>
+
+    <div id="activityInfo"></div>
+  </aside>
+</div>
   </main>
-  <footer>
+</div>
+ <footer>
 Copyright &copy; 2026 Holt Guesthouse<br>
 <a href="mailto:a0449263@amarillocollege.com">a0449263@amarillocollege.com</a>
   </footer>
-</div>
 </body>
 </html>
