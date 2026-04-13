@@ -1,0 +1,66 @@
+/*JavaScript 7th Edition
+	Chapter 1
+	Chapter Case Project
+
+	Project3_Brice
+	Author: Aubrey Brice
+	Date: 4/12/26
+
+	Filename: calendar.css*/
+.activity-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.activities {
+  flex: 2;
+}
+
+.calendar-card {
+  flex: 1;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* legend */
+.legend {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+
+.unavailable {
+  background: #002171;
+  color: #FFFFFF;
+  padding: 4px 8px;
+}
+
+.booked {
+  background: #90C7E3;
+  padding: 4px 8px;
+}
+
+.available {
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+}
+
+/* calendar table */
+#calendar {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+#calendar td,
+#calendar th {
+  width: calc(100% / 7);
+  aspect-ratio: 1 / 1;
+  border: 1px solid #3399CC;
+  text-align: center;
+  vertical-align: middle;
+}
