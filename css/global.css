@@ -157,7 +157,7 @@ video { float: right; margin: 2em; }
 }				  
 
 
-/* CARD */
+/* Card */
 .card {
   max-width: 900px;
   margin: 40px 0;
@@ -168,7 +168,7 @@ video { float: right; margin: 2em; }
 }
 
 
-/* GRID LAYOUT */
+/* Grid Layout */
 .layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -176,14 +176,14 @@ video { float: right; margin: 2em; }
   gap: 0;
 }
 
-/* GENERAL FIELDSET RESET */
+/* General Fieldset Reset */
 fieldset {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* LEFT PANEL (STAY DETAILS) */
+/* Left Panel (Stay Details) */
 .stay {
   grid-row: 1 / span 2; /* spans both right boxes */
   grid-column: 1;
@@ -193,13 +193,13 @@ fieldset {
   border: none;
 }
 
-/* FIX LEGEND POSITIONING */
+/* Legend Positioning */
 fieldset {
   position: relative;
   padding-top: 30px; /* pushes content down below legend */
 }
 
-/* STYLE ALL LEGENDS */
+/* Legend Styles */
 legend {
   position: absolute;
   top: 10px;
@@ -209,12 +209,12 @@ legend {
   font-size: 1.1em;
 }
 
-/* KEEP STAY HEADER WHITE */
+/* Keep Stay Header White */
 .stay legend {
   color: white;
 }
 
-/* RIGHT TOP (EXCURSIONS) */
+/* Right Top (Excursions) */
 .excursions {
   grid-column: 2;
   grid-row: 1;
@@ -222,7 +222,7 @@ legend {
   border: 2px solid #90C7E3;
 }
 
-/* RIGHT BOTTOM (SOUVENIRS) */
+/* Right Bottom (Souvenirs) */
 .souvenirs {
   grid-column: 2;
   grid-row: 2;
@@ -231,7 +231,7 @@ legend {
   border-top: none; /* connects visually like mockup */
 }
 
-/* TIGHTER SPACING */
+/* Tighter Spacing */
 .excursions label,
 .souvenirs label {
   display: flex;
@@ -240,13 +240,13 @@ legend {
   margin-bottom: 6px;
 }
 
-/* INPUTS */
+/* Inputs */
 input[type="number"] {
   width: 65px;
   padding: 4px;
 }
 
-/* TOTAL BAR */
+/* Total Bar */
 .total-box {
   grid-column: 1 / span 2;
   grid-row: 3;
@@ -270,7 +270,7 @@ input[type="number"] {
   color: #002171;
 }
 
-/* MOBILE RESPONSIVE */
+/* Mobil Responsive */
 @media (max-width: 768px) {
   .layout {
     grid-template-columns: 1fr;
