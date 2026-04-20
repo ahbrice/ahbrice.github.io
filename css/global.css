@@ -1,10 +1,10 @@
  /*JavaScript 7th Edition
-	Chapter 3
+	Chapter 5
 	Chapter Case Project
 
-	Project3_Brice
+	Project4_Brice
 	Author: Aubrey Brice
-	Date: 4/12/26
+	Date: 4/16/26
 
 	Filename: global.css*/
  * { box-sizing: border-box; }
@@ -76,30 +76,30 @@ dt { color: #002171;
 .guesthouse { color: #1976D2;
           font-size: 1.2em;
 }
+#homehero, #roomhero, #trailhero, #reshero, #tacthero {
+  background-size: cover;
+  background-position: center;
+}
 #homehero { height: 300px;
             background-image: url(../images/farm.png);
   			background-repeat: no-repeat;
-            background-size: 200% 100%; 
  }
 #roomhero { height: 300px;
             background-image: url(../images/mossfield.png);
   			background-repeat: no-repeat;
-            background-size: 200% 100%; 
  }
 #trailhero { height: 300px;
             background-image: url(../images/blackbeach.png);
   			background-repeat: no-repeat;
-            background-size: 200% 100%; 
 }
 #reshero { height: 300px;
             background-image: url(../images/redhouse.png);
   			background-repeat: no-repeat;
-            background-size: 200% 100%;
 }
 #tacthero { height: 300px;
             background-image: url(../images/lavaropes.png);
   			background-repeat: no-repeat;
-            background-size: 200% 100%; }
+}
 #mobile  { display: inline; }	
 #desktop { display: none; }
 section {  padding-left: .5em;
@@ -122,6 +122,7 @@ td, th { padding: 5px;
 td { text-align: center; }
 .text { text-align: left; }
 tr:nth-of-type(even) { background-color: #F5FAFC; }
+
 form { display: block;
 	  padding-left: 0;
 	  width: 100%; }
@@ -141,7 +142,6 @@ video { float: right; margin: 2em; }
 		        flex-direction: row; }
 		#mobile { display: none; }
 		#desktop { display: inline; }
-		#homehero, #roomhero, #trailhero, #reshero { background-size: 100% 100%; }
 		form { width: 100%;
 		      display: block;
 			   }
