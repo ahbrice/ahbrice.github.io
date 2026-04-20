@@ -1,0 +1,174 @@
+/*  JavaScript 7th Edition
+    Chapter 5
+    Chapter Case Project
+
+	Project4_Brice
+    Filename: lightbox.css
+*/
+
+
+/* --------------------------------------------------------------*/
+/* Styles for the slideshow box containing the images and tools  */
+/* --------------------------------------------------------------*/
+
+
+.room-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+/* LEFT SIDE */
+.gallery #mainImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+
+/* RIGHT SIDE (YOUR DARK BLUE BOX) */
+.room-info {
+  background-color: #002171; /* your dark blue */
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.room-info h2 {
+  color: white;
+}
+
+.room-info ul {
+  padding-left: 20px;
+}
+
+
+/* Styles for the box containing slide images */
+#lbImages {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 10px;
+}
+
+
+
+/* Styles for images within the slideshow box */
+#lbImages img {
+   width: 100%;
+   height: auto;
+   cursor: pointer;
+   opacity: 0.8;
+   transition: 0.3s;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+#lbImages img:hover {
+   opacity: 1;
+}
+
+
+#lbImages {
+  display: none;
+}
+
+/* ---------------------------------------------------------*/
+/* Styles for the overlay displaying an image in fullscreen */
+/* ---------------------------------------------------------*/
+
+/* Styles for the overlay */
+div#lbOverlay {
+   position: fixed;                        /* Overlay is fixed on screen */
+   z-index: 1;                             /* Overlay sits on top of other content */
+   width: 100%;                            /* Full width */
+   height: 100%;                           /* Full height */
+   top: 0;
+   left: 0;
+   background-color: rgba(7, 71, 124, 0.85);  /* Semitransparent brown background */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* Styles for the figure box within the overlay */
+div#lbOverlay figure {
+   display: block;
+   width: 80%;
+   max-width: 800px;
+}
+
+/* Styles for the image within the overlay */
+div#lbOverlay figure img {
+   display: block;
+   margin: auto;
+   width: 100%;
+   height: auto;
+   box-shadow: 5px 5px 20px black;
+   animation-name: zoom;      /* animate the opening of the figure */
+   animation-duration: 1s;    /* over a 1-second interval */
+}
+
+/* Styles for the caption within the overlay */
+div#lbOverlay figure figcaption {
+   text-align: center;
+   font-size: 1.25em;
+   color: white;
+   margin-top: 10px;
+   animation-name: zoom;      /* animate the opening of the figure */
+   animation-duration: 1s;    /* over a 1-second interval */  
+}
+
+/* Styles for the overlay close button */
+div#lbOverlay div#lbOverlayClose {
+   position: absolute;
+   top: 20px;
+   right: 40px;
+   color: #f1f1f1;
+   font-size: 40px;
+   cursor: pointer;
+   user-select: none;
+}
+
+/* Hovering styles for the modal window close button */
+div#lbOverlay div#lbOverlayClose:hover {
+   color: #002171;
+   text-shadow: 3px 3px 0px rgb(163, 163, 163);
+}
+
+/* Keyframe animation for the opening of the modal window figure and caption */
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+.image-container {
+  position: relative;
+}
+
+#prevBtn, #nextBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+#prevBtn {
+  left: 10px;
+}
+
+#nextBtn {
+  right: 10px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+  opacity: 1;
+}
