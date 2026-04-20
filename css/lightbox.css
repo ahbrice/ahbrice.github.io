@@ -7,10 +7,7 @@
 */
 
 
-/* --------------------------------------------------------------*/
 /* Styles for the slideshow box containing the images and tools  */
-/* --------------------------------------------------------------*/
-
 
 .room-layout {
   display: grid;
@@ -30,9 +27,9 @@
 }
 
 
-/* RIGHT SIDE (YOUR DARK BLUE BOX) */
+/* Right Side Blue Box */
 .room-info {
-  background-color: #002171; /* your dark blue */
+  background-color: #002171; 
   color: white;
   padding: 25px;
   border-radius: 10px;
@@ -75,9 +72,8 @@
   display: none;
 }
 
-/* ---------------------------------------------------------*/
+
 /* Styles for the overlay displaying an image in fullscreen */
-/* ---------------------------------------------------------*/
 
 /* Styles for the overlay */
 div#lbOverlay {
