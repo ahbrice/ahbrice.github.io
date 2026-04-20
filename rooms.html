@@ -1,10 +1,10 @@
 <!-- JavaScript 7th Edition
-	Chapter 3
+	Chapter 5
 	Chapter Case Project
 
-	Rooms
+	Project4_Brice
 	Author: Aubrey Brice
-	Date: 4/12/26
+	Date: 4/16/26
 
 	Filename: rooms.html-->
 <!DOCTYPE html>
@@ -14,6 +14,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/global.css" rel="stylesheet">
+<link href="css/lightbox.css" rel="stylesheet">
+<script src="scripts/lightbox.js" defer></script>
+<script src="scripts/lightbox_data.js" defer></script>
 </head>
 <body>
 
@@ -53,53 +56,45 @@
   </div>
   <main>
     <h2>The Rooms at Holt Guesthouse</h2>
-	<div id="flow">
-    <section>
-      <h3>What are the rooms like?</h3>
-      <p>Our rooms are permanent structures four feet off the ground. Each room has
-canvas walls, a wooden floor, a roof dome that can be opened, and a private deck.</p>
-     </section>
-	 <section>
-      <h3>How are the rooms furnished?</h3>
-      <p>Each room is furnished with a gas fireplace, king-size bed with down quilt, comfy couch, dining table and chairs, 
-mini-fridge, microwave, and coffee maker. Your luxury camping experience includes a sink with hot and
-cold running water. Shower and restroom facilities are located in the lodge.</p>
-     </section>
-	 <section>
-      <h3>What should I bring?</h3>
-      <p>Most guests pack comfortable walking shoes and plan to dress for changing weather with light layers of clothing. 
-It&#39;s also helpful to bring a flashlight and a sense of adventure!</p>
-    </section>
-   </div>
-   <h3>Room Packages</h3>
-   <p>A variety of luxury room packages are available. Choose a package below and contact
-us to begin your reservation. We&rsquo;re happy to build a custom package just for you!</p>
-<table>
-  <tr>
-      <th>Package Name</th>
-	  <th>Description</th>
-	  <th>Nights</th>
-	  <th>Cost per Person</th>
-  </tr>
-  <tr>
-      <td>Weekend Escape</td>
-	  <td class="text">Two breakfasts, a trail map, a picnic snack</td>
-	  <td>2</td>
-	  <td>$450</td>
-  </tr>
-    <tr>
-      <td>Zen Retreat</td>
-	  <td class="text">Four breakfasts, a trail map, a pass for daily yoga</td>
-	  <td>4</td>
-	  <td>$600</td>
-  </tr>
-    <tr>
-      <td>Kayak Away</td>
-	  <td class="text">Two breakfasts, two hours of kayak rental daily, a trail map</td>
-	  <td>2</td>
-	  <td>$500</td>
-  </tr>
-</table>
+
+<div class="room-layout">
+
+  <!-- LEFT: GALLERY -->
+  <div class="gallery">
+  <div class="image-container">
+    <button id="prevBtn">&#8592;</button>
+
+    <img id="mainImage" src="images/photo01.jpg" alt="Room Image">
+    <div id="caption"></div>
+
+    <button id="nextBtn">&#8594;</button>
+  </div>
+
+  <div id="lbImages"></div>
+</div>
+
+  <!-- RIGHT: DESCRIPTION BOX -->
+  <div class="room-info">
+    <h2>Double Room</h2>
+    <p>
+      We can accommodate 2 guests in each room and the beds are adjustable. Please let us know your preference 
+      and we will arrange your room before your arrival. 
+    </p>
+
+    <ul>
+      <li>Two Single or One Double Bed</li>
+      <li>Sea View (Room 2)</li>
+      <li>Mountain View (Rooms 1 & 3)</li>
+      <li>Shared Bathroom</li>
+      <li>Shared Dining Space</li>
+      <li>Complimentary Breakfast</li>
+      <li>Wi-Fi Included</li>
+      <li>Toiletries, Linens, & Essentials</li>
+      <li>Open Parking</li>
+    </ul>
+  </div>
+
+</div>
   </main>
   </div>
   <footer>
