@@ -1,10 +1,10 @@
 /*  JavaScript 7th Edition
-    Chapter 3
+    Chapter 5
     Chapter Case Project
 
     Holt Guesthouse
     Author: Aubrey Brice
-    Date:   4/12/26
+    Date:   4/16/26
 
     Filename: calendar.js
 */
