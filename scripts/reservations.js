@@ -4,7 +4,7 @@
 
     Holt Guesthouse
     Author: Aubrey Brice
-    Date:   4/16/26
+    Date:   5/3/26
 
     Filename: reservations.js
 */
@@ -15,8 +15,11 @@ const ROOM_RATE = 243;
 const HORSE_TOUR = 120;
 const FARM_TOUR = 150;
 const SWEATER = 400;
+const HAT = 75;
+const MITTENS = 75;
+const ALBUM = 25;
 const CHEESE = 15;
-const JAM = 9;
+const JAM = 10;
 
 // Tax rates
 const TAX_STANDARD = 0.11;   // rooms + cheese + jam
@@ -32,6 +35,9 @@ function setupForm() {
   document.getElementById("horseTour").value = 0;
   document.getElementById("farmTour").value = 0;
   document.getElementById("sweater").value = 0;
+  document.getElementById("hat").value = 0;
+  document.getElementById("mittens").value = 0;
+  document.getElementById("album").value = 0;
   document.getElementById("cheese").value = 0;
   document.getElementById("jam").value = 0;
 
@@ -52,17 +58,21 @@ function getEstimate() {
   let farm = parseInt(document.getElementById("farmTour").value) || 0;
 
   let sweater = parseInt(document.getElementById("sweater").value) || 0;
+  let hat = parseInt(document.getElementById("hat").value) || 0;
+  let mittens = parseInt(document.getElementById("mittens").value) || 0;
+  let album = parseInt(document.getElementById("album").value) || 0;
   let cheese = parseInt(document.getElementById("cheese").value) || 0;
   let jam = parseInt(document.getElementById("jam").value) || 0;
+
 
   // Base costs
   let roomCost = rooms * nights * ROOM_RATE;
   let excursionCost = (horse * HORSE_TOUR) + (farm * FARM_TOUR);
-  let souvenirCost = (sweater * SWEATER) + (cheese * CHEESE) + (jam * JAM);
+  let souvenirCost = (sweater * SWEATER) + (hat * HAT) + (mittens * MITTENS) + (album * ALBUM) + (cheese * CHEESE) + (jam * JAM);
 
   // Taxes (kept separate)
-  let taxStandard = (roomCost + excursionCost + (cheese * CHEESE) + (jam * JAM)) * TAX_STANDARD;
-  let taxClothing = (sweater * SWEATER) * TAX_CLOTHING;
+  let taxStandard = (roomCost + excursionCost + (album * ALBUM) + (cheese * CHEESE) + (jam * JAM)) * TAX_STANDARD;
+  let taxClothing = (sweater * SWEATER) + (hat * HAT) + (mittens * MITTENS) * TAX_CLOTHING;
 
   let totalTax = taxStandard + taxClothing;
 
