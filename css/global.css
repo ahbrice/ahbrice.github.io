@@ -2,9 +2,9 @@
 	Chapter 5
 	Chapter Case Project
 
-	Project4_Brice
+	Project5_Brice
 	Author: Aubrey Brice
-	Date: 4/16/26
+	Date: 5/3/26
 
 	Filename: global.css*/
  * { box-sizing: border-box; }
@@ -39,6 +39,8 @@ h1 {  font-size: 1.5em;
 .logo {
   width: 220px;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .logo .st0 {
@@ -76,7 +78,7 @@ dt { color: #002171;
 .guesthouse { color: #1976D2;
           font-size: 1.2em;
 }
-#homehero, #roomhero, #trailhero, #reshero, #tacthero {
+#homehero, #roomhero, #trailhero, #reshero, #tacthero, #shophero {
   background-size: cover;
   background-position: center;
 }
@@ -100,6 +102,10 @@ dt { color: #002171;
             background-image: url(../images/lavaropes.png);
   			background-repeat: no-repeat;
 }
+#shophero { height: 300px;
+            background-image: url(../images/glacier.png);
+  			background-repeat: no-repeat;
+ }
 #mobile  { display: inline; }	
 #desktop { display: none; }
 section {  padding-left: .5em;
@@ -157,161 +163,21 @@ video { float: right; margin: 2em; }
 }				  
 
 
-/* Card */
-.card {
-  max-width: 900px;
-  margin: 40px 0;
-  padding: 20px;
-  background: #f5f5f5;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
 
 
-/* Grid Layout */
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: auto auto auto;
-  gap: 0;
-}
-
-/* General Fieldset Reset */
+/* GENERAL FIELDSET RESET */
 fieldset {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
 }
 
-/* Left Panel (Stay Details) */
-.stay {
-  grid-row: 1 / span 2; /* spans both right boxes */
-  grid-column: 1;
 
-  background-color: #002171;
-  color: white;
-  border: none;
-}
 
-/* Legend Positioning */
-fieldset {
-  position: relative;
-  padding-top: 30px; /* pushes content down below legend */
-}
-
-/* Legend Styles */
-legend {
-  position: absolute;
-  top: 10px;
-  left: 20px;
-
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-/* Keep Stay Header White */
-.stay legend {
-  color: white;
-}
-
-/* Right Top (Excursions) */
-.excursions {
-  grid-column: 2;
-  grid-row: 1;
-
-  border: 2px solid #90C7E3;
-}
-
-/* Right Bottom (Souvenirs) */
-.souvenirs {
-  grid-column: 2;
-  grid-row: 2;
-
-  border: 2px solid #90C7E3;
-  border-top: none; /* connects visually like mockup */
-}
-
-/* Tighter Spacing */
-.excursions label,
-.souvenirs label {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
-}
-
-/* Inputs */
+/* INPUTS */
 input[type="number"] {
   width: 65px;
   padding: 4px;
 }
 
-/* Total Bar */
-.total-box {
-  grid-column: 1 / span 2;
-  grid-row: 3;
 
-  background-color: #90C7E3;
-  padding: 20px;
-}
-
-.total-box p {
-  margin: 0;
-  font-weight: bold;
-  color: #002171;
-  font-size: 1.2em;
-}
-#tax {
-  font-weight: normal;
-}
-
-#estimate {
-  font-weight: normal;
-  color: #002171;
-}
-
-/* Mobil Responsive */
-@media (max-width: 768px) {
-  .layout {
-    grid-template-columns: 1fr;
-  }
-
-  .stay {
-    grid-row: auto;
-    grid-column: 1;
-  }
-
-  .excursions {
-    grid-column: 1;
-  }
-
-  .souvenirs {
-    grid-column: 1;
-    border-top: 2px solid #90C7E3;
-  }
-
-  .total-box {
-    grid-column: 1;
-    
-  }
-  .tax-line {
-  font-size: 0.9em;
-  font-weight: normal;
-  margin-bottom: 5px;
-}
-
-.total-line {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-  .excursions label,
-  .souvenirs label {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  input[type="number"] {
-    margin-top: 5px;
-  }
-}
