@@ -1,11 +1,11 @@
 "use strict";
 /*    JavaScript 7th Edition
-      Chapter 5
+      Chapter 10
      Chapter Case Project
 
 	Project4_Brice
       Author: Aubrey Brice
-      Date:   4/16/26
+      Date:   5/10/26
 
       Filename: lightbox.js
 */
