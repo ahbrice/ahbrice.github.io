@@ -1,10 +1,10 @@
 <!-- JavaScript 7th Edition
-	Chapter 5
+	Chapter 10
 	Chapter Case Project
 
-	Project5_Brice
+	Project6_Brice
 	Author: Aubrey Brice
-	Date: 5/3/26
+	Date: 5/4/26
 
 	Filename: index.html-->
 <!DOCTYPE html>
@@ -14,6 +14,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="css/global.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+<link rel="stylesheet" href="css/mapstyles.css">
 </head>
 <body>
   <header>
@@ -52,11 +54,7 @@
   </div>
   <main>
     <h2>Enjoy Wild Iceland</h2>
-	<video controls="controls" poster="images/pacific.jpg"
-    width="320" height="240">
-	 <source src="images/pacific.mp4" type="video/mp4"> 
-	 <source src="images/pacific.ogv" type="video/ogg">
-   </video>
+    <div id="map"></div>
     <p><span class="guesthouse">Holt Guesthouse</span> is located under Eyjafjöll, right under the mountains and famous volcano Eyjafjallajökull. It is about 1.5 hour drive from the capital Reykjavik.
     </p>
     <ul>
@@ -69,14 +67,15 @@
     </ul>
     <div>
     <span class="guesthouse">Holt Guesthouse</span><br>
-245 Hverfisvegur, 861 Hvolsvöllur<br><br>
+245 Hverfisvegur, 861 Hvolsvöllur<br>
 <a id="mobile" href="tel:888-555-5555">888-555-5555</a><span id="desktop">888-555-5555</span><br><br>
     </div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts/mapscript.js"></script>
   </main>
   </div>
   <footer>
-Copyright &copy; 2026 Holt Guesthouse<br>
-<a href="mailto:a0449263@amarillocollege.com">a0449263@amarillocollege.com</a>
+Copyright &copy; 2026 <a href="mailto:a0449263@amarillocollege.com">Holt Guesthouse</a>
   </footer>
 </body>
 </html>
