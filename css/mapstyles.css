@@ -1,0 +1,18 @@
+.layout {
+  display: flex;
+  flex-direction: column; /* Stacks text on top of map */
+  align-items: left;    /* Centers the stack */
+}
+	
+
+
+/* THE FRAME */
+#map {
+   height: 250px; 
+   width: 300px;
+   border: 10px solid #002171; 
+   border-radius: 15px;
+   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+   outline: 1px solid #90C7E3;
+}
+ 
