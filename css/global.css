@@ -133,7 +133,10 @@ form { display: block;
 	  padding-left: 0;
 	  width: 100%; }
 input, textarea { margin-bottom: .5em; }
-
+#map {
+  float: right;
+  margin: 2em;
+}
 @media (min-width: 600px) { 
 		h1 { font-size: 2em;
             letter-spacing: .25em;		}
